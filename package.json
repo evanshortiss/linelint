@@ -2,7 +2,10 @@
   "name": "linelint",
   "version": "0.0.0",
   "description": "Scan for lines in files that are longer than a specified limit.",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "bin": {
+    "linelint": "./bin/linelint.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +25,9 @@
   "dependencies": {
     "commander": "~2.3.0",
     "colors": "~0.6.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/evanshortiss/linelint/issues"
+  },
+  "homepage": "https://github.com/evanshortiss/linelint"
 }
