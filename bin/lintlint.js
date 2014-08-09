@@ -13,9 +13,10 @@ var fs = require('fs')
 require('colors'); // It's colours I tell ya. Colours!!!
 
 program
-  .option('-l, --linelength', 'Length that lines cannot exceed. Defaults to 80')
+  .option('-l, --linelength <n>', 'Length that lines cannot exceed. Defaults to 80')
   .version(version)
   .parse(process.argv);
+
 
 // Check for valid files
 files = process.argv.filter(function (f) {
@@ -30,7 +31,7 @@ files = process.argv.filter(function (f) {
 files.forEach(function (f) {
   res.push({
     path: f,
-    lines: lint.verify(fs.readFileSync(f, 'utf8'), parseInt(program.linelength))
+    lines: lint.verify(fs.readFileSync(f, 'utf8'), program.linelength)
   });
 });
 

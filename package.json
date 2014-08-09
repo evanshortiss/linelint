@@ -15,9 +15,9 @@
   "author": "Evan Shortiss",
   "license": "MIT",
   "devDependencies": {
-    "lintspaces": "~0.2.1",
     "mocha": "~1.21.4",
-    "jshint": "~2.5.3"
+    "jshint": "~2.5.3",
+    "lintspaces-cli": "0.0.4"
   },
   "dependencies": {
     "commander": "~2.3.0",
