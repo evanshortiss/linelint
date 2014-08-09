@@ -27,6 +27,13 @@ files = process.argv.filter(function (f) {
   }
 });
 
+
+// Warn that no files were provided
+if (files.length === 0) {
+  console.log('\nPlease provide linelint with a list of files to check.\n');
+}
+
+
 // Run the check on each file
 files.forEach(function (f) {
   res.push({
@@ -34,6 +41,7 @@ files.forEach(function (f) {
     lines: lint.verify(fs.readFileSync(f, 'utf8'), program.linelength)
   });
 });
+
 
 // Sort files from pass to worst offender
 res.sort(function (a, b) {
@@ -46,6 +54,7 @@ res.sort(function (a, b) {
   }
 });
 
+
 // Log results
 res.forEach(function (f) {
   if (f.lines.length === 0) {
@@ -53,5 +62,13 @@ res.forEach(function (f) {
   } else {
     console.log('%s %s', '[FAIL]'.red, path.resolve(f.path));
     console.log('\t Lines: %s', f.lines.join(', '));
+  }
+});
+
+
+// Check should we exit with an error
+res.forEach(function (f) {
+  if (f.lines > 0) {
+    process.exit(0);
   }
 });
