@@ -1,0 +1,9 @@
+This line is fine.
+
+Some random text that is more than 120 cols long. Some random text that is more than 120 cols long. Some random text that is more than 120 cols long.
+
+This is a trick line. This is a trick line. This is a trick line.\n This is a trick line. This is a trick line. This is a trick line. 
+
+This line is fine too.
+
+Some random text that is more than 80 cols long. Some random text that is more than 80 cols long.

@@ -1,0 +1,26 @@
+{
+  "name": "linelint",
+  "version": "0.0.0",
+  "description": "Scan for lines in files that are longer than a specified limit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "linelint",
+    "lint",
+    "line",
+    "width"
+  ],
+  "author": "Evan Shortiss",
+  "license": "MIT",
+  "devDependencies": {
+    "lintspaces": "~0.2.1",
+    "mocha": "~1.21.4",
+    "jshint": "~2.5.3"
+  },
+  "dependencies": {
+    "commander": "~2.3.0",
+    "colors": "~0.6.2"
+  }
+}
