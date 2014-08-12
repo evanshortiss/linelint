@@ -69,6 +69,6 @@ res.forEach(function (f) {
 // Check should we exit with an error
 res.forEach(function (f) {
   if (f.lines > 0) {
-    process.exit(0);
+    process.exit(1);
   }
 });
