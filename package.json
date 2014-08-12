@@ -1,6 +1,6 @@
 {
   "name": "linelint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Scan for lines in files that are longer than a specified limit.",
   "main": "./lib/index.js",
   "bin": {
