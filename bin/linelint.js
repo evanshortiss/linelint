@@ -13,7 +13,8 @@ var fs = require('fs')
 require('colors'); // It's colours I tell ya. Colours!!!
 
 program
-  .option('-l, --linelength <n>', 'Length that lines cannot exceed. Defaults to 80')
+  .option('-l, --linelength <n>', 'Length that lines cannot exceed. Defaults' +
+    ' to 80')
   .version(version)
   .parse(process.argv);
 

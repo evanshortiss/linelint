@@ -20,7 +20,9 @@
   "devDependencies": {
     "mocha": "~1.21.4",
     "jshint": "~2.5.3",
-    "lintspaces-cli": "0.0.4"
+    "lintspaces-cli": "0.0.4",
+    "browserify": "~7.0.0",
+    "uglify-js": "~2.4.15"
   },
   "dependencies": {
     "commander": "~2.3.0",

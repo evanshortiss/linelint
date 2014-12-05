@@ -2,7 +2,7 @@ This line is fine.
 
 Some random text that is more than 120 cols long. Some random text that is more than 120 cols long. Some random text that is more than 120 cols long.
 
-This is a trick line. This is a trick line. This is a trick line.\n This is a trick line. This is a trick line. This is a trick line.
+This is a trick line, but is over 120 cols so should fail. This is a trick line. This is a trick line.\n This is a \n trick line. This is a trick line. This is a \ntrick line.
 
 This line is fine too.
 
