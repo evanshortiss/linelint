@@ -1,10 +1,18 @@
 linelint
 ========
 
-CLI & Library to scan files for lines that exceed a specified width.
+CLI & JS Library (Node.js and Browser) to scan files/text for lines that exceed 
+a specified column width.
 
 
-### Help Output
+### Install
+Just use npm. 
+
+```
+npm install linelint
+```
+
+### CLI Help Output
 ```
 evan@Evans-MacBook-Pro:~/lintlint --help
 
@@ -16,6 +24,7 @@ evan@Evans-MacBook-Pro:~/lintlint --help
     -l, --linelength <n>  Length that lines cannot exceed. Defaults to 80
     -V, --version         output the version number
 ```
+
 
 ### CLI Usage Example
 Test all *.txt* files in the */test* directory for lines longer than 120
@@ -30,9 +39,12 @@ evan@Evans-MacBook-Pro:~/lintlint -l 120 ./test/*.txt
    Lines: 3, 5
 ```
 
-### Library Usage Example
+
+### API Usage Example
 Pretty easy here. Require it as you would any module and call the *verify*
-function.
+function. This can also be used in the browser to scan strings of text. Using 
+browserify will allow you to call this using _require_. Alternatively use one 
+of the files in the _/dist_ directory.
 
 ```javascript
 var linelint = require('linelint')
@@ -42,7 +54,11 @@ var linelint = require('linelint')
 var invalidLines = linelint.verify(fs.readFileSync('./test.js', 'utf8'));
 ```
 
+
 ### API
+Scanning files via the CLI will use the 
+[EOL (End of Line)](http://nodejs.org/api/os.html#os_os_eol) delimeter for the 
+OS upon which you're running. In the browser "\n" will be used.
 
 ##### verify(str[, length]);
 Check the contents of a string *str* have no lines longer than *length*

@@ -1,19 +1,23 @@
 {
   "name": "linelint",
   "version": "0.0.3",
-  "description": "Scan for lines in files that are longer than a specified limit.",
+  "description": "Scan for lines that are longer than a specified limit.",
   "main": "./lib/index.js",
   "bin": {
     "linelint": "./bin/linelint.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm i && ./node_modules/.bin/mocha -R spec ./test/*.js"
   },
   "keywords": [
     "linelint",
     "lint",
     "line",
-    "width"
+    "width",
+    "scan",
+    "lines",
+    "check",
+    "verify"
   ],
   "author": "Evan Shortiss",
   "license": "MIT",
