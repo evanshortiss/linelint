@@ -20,7 +20,7 @@ program
 
 
 // Check for valid files
-files = process.argv.filter(function (f) {
+files = process.argv.slice(1).filter(function (f) {
   if (f === process.argv[1]) {
     return false;
   } else {
